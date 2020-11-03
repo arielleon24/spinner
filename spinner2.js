@@ -1,10 +1,10 @@
-let action = ["\r|   ", "\r/   ", "\r-   ", "\r\\   ", "\r|   ", "\r/   ", "\r-   ", "\r|   ", ]
-const roll = function(rolls){
-  let addtime = 100
-  rolls.forEach(frame => {
-    setTimeout(() => {  
+const spin = ["\r|    ", "\r/    ", "\r-    ", "\r\\   ", "\r|    ", "\r/    ", "\r-    ", "\r|    ",
+];
+let timer = 0;
+
+  for (let frame of spin) {
+    setTimeout(() => {
       process.stdout.write(frame);
-    }, addtime);
-    addtime += 200}) 
+    }, timer);
+    timer += 100;
   }
-roll(action)
